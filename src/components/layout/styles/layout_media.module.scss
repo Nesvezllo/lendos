@@ -1,0 +1,17 @@
+@include desktop {
+    .layout {
+        overflow: hidden;
+    }
+}
+
+@include laptop {
+    .layout {
+        overflow: hidden;
+    }
+}
+
+@include mobile {
+    .layout {
+        padding: 2vh 0;
+    }
+}

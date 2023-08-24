@@ -1,0 +1,88 @@
+@include desktop {
+   .main {
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+        width: 100vw;
+        height: 100vh;
+        .image_block {
+            width: 100%;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient( rgba(104, 223, 250, 0.08), rgba(104, 223, 250, 0.25) );
+        }
+
+        .test_wrapper {
+            width: 55%;
+            padding: 2vh 2vw 0 2vw;
+            .test {
+                .test_question {
+                    .text_block {
+                        padding: 1vh 1vw;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@include laptop {
+    .main {
+        display: flex;
+        align-items: stretch;
+        width: 100vw;
+        height: 100vh;
+        .image_block {
+            display: block !important;
+            overflow-y: hidden;
+            background: linear-gradient( rgba(104, 223, 250, 0.08), rgba(104, 223, 250, 0.25) );
+        }
+
+        .test_wrapper {
+            width: 50%;
+            padding: 2vh 2vw 0 2vw;
+            .test {
+                .test_question {
+                    .text_block {
+                        padding: 1vh 1vw;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        
+        .text_block {
+            width: 92.5% !important;
+            padding: 1vh 1vw;
+        }
+    }
+}
+
+.hidden {
+    transition: all .5s ease-in-out;      
+        &.visible {
+          opacity: 1;
+      
+          &::before {
+            opacity: 1;
+          }
+        }
+      
+        &.hidden {
+          opacity: 0;
+      
+          &::before {
+            opacity: 1;
+        }
+        }
+}
